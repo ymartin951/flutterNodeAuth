@@ -1,10 +1,11 @@
 const express = require('express')
-const {getController,addUser,authenticate,getTokenInfo} = require('../controllers/controller')
+const {getController,addUser,authenticate,getTokenInfo,dashboard} = require('../controllers/controller')
 
 const route = express.Router()
 
 route.get('/', getController)
 
+route.get('/dashboard', dashboard)
 //Add new user
 route.post('/addUser', addUser)
 

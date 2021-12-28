@@ -9,6 +9,12 @@ const getController = (req, res) => {
     
 }
 
+const dashboard = (req, res) => {
+
+    res.send('Dashboard')
+    
+}
+
 
 const addUser = (req,res) => {
     if (req.body.name && req.body.password == '') {
@@ -84,4 +90,4 @@ const getTokenInfo = (req, res) => {
     
 }
 
-module.exports = {getController,addUser,authenticate,getTokenInfo}
+module.exports = {getController,addUser,authenticate,getTokenInfo,dashboard}
